@@ -7,8 +7,10 @@ steps:
     addToPath: true
 - bash: |
     npm config set msvs_version 2017 --global
+    node-gyp configure --msvs_version=2017
+    node-gyp configure --verbose
   name: Set_MSVS_Version
-  
+
 - bash: |
     if [ "$ELECTRON_RELEASE" == "1" ]; then
       echo 'Bootstrapping Electron for release build'
