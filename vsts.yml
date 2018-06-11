@@ -7,6 +7,7 @@ steps:
     addToPath: true
     
 - bash: |
+    npm config set msvs_version 2017 --global
     if [ "$ELECTRON_RELEASE" == "1" ]; then
       echo 'Bootstrapping Electron for release build'
       script/bootstrap.py --target_arch=$TARGET_ARCH
