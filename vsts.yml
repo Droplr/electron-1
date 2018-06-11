@@ -1,11 +1,17 @@
 resources:
 - repo: self
 steps:
+
 - bash: |
     dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Auxiliary\Build"
-    cd "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Auxiliary\Build"
-    copy vcvarsall.bat ..\..\
   name: Check_Install_Dir
+
+- task: CopyFiles@2
+  inputs:
+    sourceFolder: C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Auxiliary\Build\*
+    targetFolder: C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC
+    name: Copy_Build_Files
+
 - task: UsePythonVersion@0
   inputs:
     versionSpec: '2.7.14'
