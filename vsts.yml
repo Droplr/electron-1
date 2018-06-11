@@ -3,7 +3,7 @@ resources:
 steps:
 - bash: |
     dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Auxiliary\Build"
-    mklink /D "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\vcvarsall.bat" "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Auxiliary\Build\vcvarsall.bat"
+    copy "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Auxiliary\Build\vcvarsall.bat" "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\"
   name: Check_Install_Dir
 - task: UsePythonVersion@0
   inputs:
