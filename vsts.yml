@@ -10,7 +10,7 @@ steps:
   name: Set_MSVS_Version
 
 - bash: |
-    dir C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build
+    dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build"
   name: Check_Install_Dir
 
 - bash: |
