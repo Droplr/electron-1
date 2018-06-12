@@ -7,7 +7,7 @@ steps:
   name: Check_Install_Dir
 
 - script: |
-    cp C:\\Program\ Files \(x86\)\\Microsoft\ Visual\ Studio\\2017\\Enterprise\\VC\\Auxiliary\\Build\\vcvarsall.bat C:\\Program\ Files \(x86\)\\Microsoft\ Visual\ Studio\\2017\\Enterprise\\VC
+    cp "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Auxiliary\Build\vcvarsall.bat" "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC"
   name: LinkVars
  
 - task: UsePythonVersion@0
