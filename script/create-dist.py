@@ -29,7 +29,8 @@ NATIVE_MKSNAPSHOT_DIR = os.path.join(SOURCE_ROOT, 'vendor', 'native_mksnapshot')
 
 PROJECT_NAME = electron_gyp()['project_name%']
 PRODUCT_NAME = electron_gyp()['product_name%']
-PDF_VIEWER_ENABLED = electron_features()['enable_pdf_viewer%']
+# PDF_VIEWER_ENABLED = electron_features()['enable_pdf_viewer%']
+PDF_VIEWER_ENABLED = False
 
 TARGET_BINARIES = {
   'darwin': [
