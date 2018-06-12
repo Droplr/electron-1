@@ -28,10 +28,10 @@ steps:
     fi
   name: Bootstrap
 
-- bash: |
-    npm run lint
-  name: Lint
-  condition: and(succeeded(), ne(variables['ELECTRON_RELEASE'], '1'))
+# - bash: |
+#     npm run lint
+#   name: Lint
+#   condition: and(succeeded(), ne(variables['ELECTRON_RELEASE'], '1'))
 
 - bash: |
     if [ "$ELECTRON_RELEASE" == "1" ]; then
