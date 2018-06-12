@@ -4,6 +4,7 @@ steps:
 
 - bash: |
     dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Auxiliary\Build"
+    cat "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Auxiliary\Build\vcvarsall.bat"
   name: Check_Install_Dir
 
 - script: |
