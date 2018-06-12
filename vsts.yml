@@ -58,7 +58,8 @@ steps:
     #   ELECTRON_S3_BUCKET="$(s3_bucket)" ELECTRON_S3_ACCESS_KEY="$(s3_access_key)" ELECTRON_S3_SECRET_KEY="$(s3_secret_key)" ELECTRON_GITHUB_TOKEN="$(github_token)" script/upload.py --upload_to_s3
     # fi
   name: Upload_distribution
-  condition: and(succeeded(), eq(variables['ELECTRON_RELEASE'], '1'))
+  # condition: and(succeeded(), eq(variables['ELECTRON_RELEASE'], '1'))
+  condition: succeeded()
 
 # - bash: |
 #     echo 'Testing Electron debug build'
