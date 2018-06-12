@@ -17,10 +17,10 @@ steps:
 - bash: |
     if [ "$ELECTRON_RELEASE" == "1" ]; then
       echo 'Bootstrapping Electron for release build'
-      script/bootstrap.py --target_arch=$TARGET_ARCH
+      script/bootstrap.py --target_arch=$TARGET_ARCH --verbose
     else
       echo 'Bootstrapping Electron for debug build'
-      script/bootstrap.py --target_arch=$TARGET_ARCH --dev
+      script/bootstrap.py --target_arch=$TARGET_ARCH --dev --verbose
     fi
   name: Bootstrap
 
