@@ -368,7 +368,7 @@ WebContents::WebContents(v8::Isolate* isolate,
   else if (options.Get("isBrowserView", &b) && b)
     type_ = BROWSER_VIEW;
 #if defined(ENABLE_OSR)
-  else if (options.Get("offscreen", &b) && b)
+  else if (options.Get(options::kOffscreen, &b) && b)
     type_ = OFF_SCREEN;
 #endif
 
@@ -1296,15 +1296,9 @@ void WebContents::OpenDevTools(mate::Arguments* args) {
     state = "detach";
   }
   if (args && args->Length() == 1) {
-    bool detach = false;
     mate::Dictionary options;
     if (args->GetNext(&options)) {
       options.Get("mode", &state);
-
-      // TODO(kevinsawicki) Remove in 2.0
-      options.Get("detach", &detach);
-      if (state.empty() && detach)
-        state = "detach";
     }
   }
   managed_web_contents()->SetDockState(state);

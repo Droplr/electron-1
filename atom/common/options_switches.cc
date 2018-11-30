@@ -127,8 +127,7 @@ const char kOpenerID[] = "openerId";
 const char kScrollBounce[] = "scrollBounce";
 
 // Enable blink features.
-// TODO(kevinsawicki) Rename to enableBlinkFeatures in 2.0
-const char kBlinkFeatures[] = "blinkFeatures";
+const char kEnableBlinkFeatures[] = "enableBlinkFeatures";
 
 // Disable blink features.
 const char kDisableBlinkFeatures[] = "disableBlinkFeatures";
@@ -139,7 +138,19 @@ const char kNodeIntegrationInWorker[] = "nodeIntegrationInWorker";
 // Enable the web view tag.
 const char kWebviewTag[] = "webviewTag";
 
+const char kNativeWindowOpen[] = "nativeWindowOpen";
+
 const char kCustomArgs[] = "additionalArguments";
+
+const char kPlugins[] = "plugins";
+
+const char kSandbox[] = "sandbox";
+
+const char kWebSecurity[] = "webSecurity";
+
+const char kAllowRunningInsecureContent[] = "allowRunningInsecureContent";
+
+const char kOffscreen[] = "offscreen";
 
 }  // namespace options
 
